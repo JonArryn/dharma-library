@@ -9,8 +9,6 @@ function App() {
 		<>
 			<GlobalsProvider>
 				<HomeTopNav />
-				<Typography variant='h2'>Dharma Library</Typography>
-				<Typography>My App Code</Typography>
 				<Outlet />
 			</GlobalsProvider>
 		</>
