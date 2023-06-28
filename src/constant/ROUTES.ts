@@ -1,8 +1,15 @@
-const APP_ROUTES = {
-	ROOT: '/',
-	HOME: '/',
-	LIBRARY: '/library',
-	BOOK: '/book',
+const ROUTES = {
+  MAIN: {
+    ROOT: "/",
+    HOME: "/",
+    LOGIN: "/login",
+  },
+  APP: {
+    INDEX: "/app",
+    DASHBOARD: "/app",
+    LIBRARY: "/app/library",
+    BOOK: "/app/book",
+  },
 };
 
-export { APP_ROUTES as default };
+export { ROUTES as default };
