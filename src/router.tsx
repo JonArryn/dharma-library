@@ -12,6 +12,10 @@ import Login from "page/login/Login";
 import Index from "page/Index";
 import AppLayout from "app/AppLayout";
 import Dashboard from "app/dashboard/Dashboard";
+import MyLibrary from "app/library/Page/MyLibrary";
+import MemberLibrary from "app/library/Page/MemberLibrary";
+import AllLibraries from "app/library/Page/AllLibraries";
+import CreateLibrary from "app/library/Page/CreateLibrary";
 
 const router = createBrowserRouter([
   {
@@ -37,9 +41,17 @@ const router = createBrowserRouter([
         children: [
           { path: ROUTES.APP.DASHBOARD, element: <Dashboard /> },
           {
-            path: ROUTES.APP.LIBRARY,
+            path: ROUTES.APP.LIBRARY.VIEW_ALL,
             element: <Library />,
-            children: [{ path: ROUTES.APP.LIBRARY }],
+            children: [
+              { path: ROUTES.APP.LIBRARY.VIEW_ALL, element: <AllLibraries /> },
+              { path: ROUTES.APP.LIBRARY.CREATE, element: <CreateLibrary /> },
+              { path: ROUTES.APP.LIBRARY.VIEW_OWNED, element: <MyLibrary /> },
+              {
+                path: ROUTES.APP.LIBRARY.VIEW_MEMBER,
+                element: <MemberLibrary />,
+              },
+            ],
           },
           {
             path: ROUTES.APP.BOOK,

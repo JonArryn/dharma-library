@@ -40,7 +40,7 @@ const APP_SIDE_NAV_ITEMS: ISideNavItems = {
   },
   LIBRARY: {
     name: "Libraries",
-    route: ROUTES.APP.LIBRARY,
+    route: ROUTES.APP.LIBRARY.VIEW_ALL,
   },
   BOOK: {
     name: "Books",
@@ -51,16 +51,26 @@ const APP_SIDE_NAV_ITEMS: ISideNavItems = {
 const APP_TOP_NAV_ITEMS: IAppTopNavItems = {
   LOGOUT: {
     name: "Logout",
-    route: "/app/logout",
+    route: ROUTES.APP.LOGOUT,
   },
   ACCOUNT: {
     name: "My Account",
-    route: "/app/account/:userId",
+    route: ROUTES.APP.ACCOUNT,
+  },
+};
+
+const APP_SUB_NAV_ITEMS = {
+  LIBRARY: {
+    ALL: { name: "All Libraries", route: ROUTES.APP.LIBRARY.VIEW_ALL },
+    OWNED: { name: "My Libraries", route: ROUTES.APP.LIBRARY.VIEW_OWNED },
+    MEMBER: { name: "Member Libraries", route: ROUTES.APP.LIBRARY.VIEW_MEMBER },
   },
 };
 
 export {
-  MAIN_TOP_NAV_ITEMS as NAV_ITEMS,
+  type INavItem,
+  MAIN_TOP_NAV_ITEMS,
   APP_SIDE_NAV_ITEMS,
   APP_TOP_NAV_ITEMS,
+  APP_SUB_NAV_ITEMS,
 };

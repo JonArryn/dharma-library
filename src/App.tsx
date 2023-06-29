@@ -1,6 +1,6 @@
 import "index.css";
 import GlobalsProvider from "provider/GlobalsProvider";
-import HomeTopNav from "component/navigation/HomeTopNav";
+import HomeTopNav from "component/HomeTopNav";
 import LightSwitch from "component/LightSwitch";
 import { Outlet } from "react-router-dom";
 

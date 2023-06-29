@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NAV_ITEMS } from "../../constant/NavItems";
+import { MAIN_TOP_NAV_ITEMS } from "../constant/NavItems";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { tokens } from "theme/theme";
 
@@ -106,7 +106,7 @@ const HomeTopNav = () => {
               textColor="secondary"
               indicatorColor="secondary"
             >
-              {Object.values(NAV_ITEMS).map((item) => (
+              {Object.values(MAIN_TOP_NAV_ITEMS).map((item) => (
                 <Tab
                   key={item.name}
                   label={item.name}
@@ -147,7 +147,7 @@ const HomeTopNav = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {Object.values(NAV_ITEMS).map((item) => (
+              {Object.values(MAIN_TOP_NAV_ITEMS).map((item) => (
                 <MenuItem
                   key={item.name}
                   onClick={() => handleNavMenuClick(item.route)}
@@ -203,7 +203,7 @@ const HomeTopNav = () => {
               open={Boolean(userMenuAnchorEl)}
               onClose={handleCloseUserMenu}
             >
-              {Object.values(NAV_ITEMS).map((item) => (
+              {Object.values(MAIN_TOP_NAV_ITEMS).map((item) => (
                 <MenuItem
                   key={item.name}
                   onClick={() => handleUserMenuClick(item.route)}

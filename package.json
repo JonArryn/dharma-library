@@ -17,6 +17,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
     "install": "^0.13.0",
     "npm": "^9.6.2",
     "react": "^18.2.0",
@@ -27,7 +28,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start .env.local",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -38,7 +39,8 @@
       "react-app/jest"
     ],
     "rules": {
-      "semi": "warn"
+      "semi": "warn",
+      "no-console": "warn"
     },
     "parserOptions": {
       "project": "./tsconfig.json"

@@ -3,7 +3,6 @@ import Divider from "@mui/material/Divider";
 import React, { useState, useEffect } from "react";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
@@ -109,6 +108,7 @@ const AppNavFrame = ({ children }: { children: React.ReactNode }) => {
       sx={{
         width: { sm: `calc(100% - ${drawerWidth}px)` },
         ml: { sm: `${drawerWidth}px` },
+        backgroundColor: colors.primary[400],
       }}
     >
       <Toolbar>
@@ -122,9 +122,9 @@ const AppNavFrame = ({ children }: { children: React.ReactNode }) => {
           <MenuIcon />
         </IconButton>
         <Typography
-          variant="h6"
+          variant="h5"
           noWrap
-          component="div"
+          color={colors.primary[100]}
         >
           Dharma Library
         </Typography>

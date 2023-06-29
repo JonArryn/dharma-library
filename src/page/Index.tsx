@@ -1,4 +1,4 @@
-import HomeTopNav from "component/navigation/HomeTopNav";
+import HomeTopNav from "component/HomeTopNav";
 
 import { Outlet } from "react-router-dom";
 
